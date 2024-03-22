@@ -1,6 +1,4 @@
-package com.example.stayhub;
 
-import java.util.Calendar;
 public class Room {
 
     private String owner;
@@ -10,6 +8,7 @@ public class Room {
     private float rating;
     private int noOfReviews;
     private String URL;
+    private HotelReservationSystem reservationSystem = new HotelReservationSystem();
 
     public String getOwner() {
         return owner;
@@ -67,6 +66,11 @@ public class Room {
         this.URL = URL;
     }
 
-    Room(){}
+    Room() {
+    }
+
+    public HotelReservationSystem getReservationSystem() {
+        return this.reservationSystem;
+    }
 
 }

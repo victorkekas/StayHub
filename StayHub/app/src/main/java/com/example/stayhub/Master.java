@@ -1,18 +1,27 @@
-package com.example.stayhub;
-
+import java.util.ArrayList;
 import org.json.JSONObject;
 
 public class Master {
 
-    Worker worker1= new Worker();
-    Worker worker2= new Worker();
-    Worker worker3= new Worker();
+    private ArrayList<Worker> workers;
+    private int numOfworkers;
 
-    Master(){}
+    Master() {
+    }
 
-    public String printJSON(JSONObject json){
+    public void intitializeWorkers() {
+        for (int i = 0; i <= numOfworkers; i++) {
+            workers.add(new Worker());
+        }
+    }
+
+    public String printJSON(JSONObject json) {
         System.out.println("Printing JSON...");
         return "ok";
+    }
+
+    // move the procedure to the right worker
+    public void Hashing(String user, int procedure) {
     }
 
 }
