@@ -1,3 +1,5 @@
+package com.example.stayhub;
+
 public class Reservation {
     private String guestName;
     private Room room;

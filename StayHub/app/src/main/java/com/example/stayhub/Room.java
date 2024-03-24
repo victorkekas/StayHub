@@ -1,3 +1,4 @@
+package com.example.stayhub;
 
 public class Room {
 
@@ -11,7 +12,7 @@ public class Room {
     private HotelReservationSystem reservationSystem = new HotelReservationSystem();
 
     public String getOwner() {
-        return owner;
+        return this.owner;
     }
 
     public void setOwner(String owner) {

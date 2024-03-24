@@ -1,25 +1,28 @@
+package com.example.stayhub;
+
 import java.util.ArrayList;
 import java.time.LocalDate;
 import java.util.Map;
 
 public class Worker {
 
-    public static ArrayList<Room> Rooms;
+    public ArrayList<Room> Rooms= new ArrayList<>() ;
 
     Worker() {
     }
 
     public void AddRoom(Room room) {
-        Worker.Rooms.add(room);
+        this.Rooms.add(room);
+        System.out.println("SUCCESSFULLY ADDED ROOM- VILLA :"+ room.getPropertyName() );
     }
 
     public void ViewReservations(String owner) {
-        for (Room room : Rooms) {
+        for (Room room : this.Rooms) {
             // check the rooms of the owner
             if (room.getOwner().equals(owner)) {
                 // get the reservations for each owner's rooms
-                for (Map.Entry<LocalDate, Reservation> res : (room.getReservationSystem()).getReservations()
-                        .entrySet()) {
+                for (Reservation res : ((room.getReservationSystem()).getReservations()).values()) {
+
                     System.out.println(res);
                 }
             }
@@ -31,6 +34,12 @@ public class Worker {
     }
 
     // think how to pass the filters
-    public void Search() {
+    public ArrayList<Room> Search(String info) {
+        return null;
+    }
+
+    public ArrayList<Room> getRooms(){
+        return (this.Rooms);
     }
 }
+

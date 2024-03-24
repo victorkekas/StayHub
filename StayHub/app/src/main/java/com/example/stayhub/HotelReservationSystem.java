@@ -1,12 +1,14 @@
+package com.example.stayhub;
+
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 
 public class HotelReservationSystem {
-    private Map<LocalDate, Reservation> reservations;
+    private Map<LocalDate, Reservation> reservations= new HashMap<>();
 
     public HotelReservationSystem() {
-        reservations = new HashMap<>();
+
     }
 
     public boolean makeReservation(LocalDate startDate, LocalDate endDate, String guestName, Room room) {
@@ -47,8 +49,8 @@ public class HotelReservationSystem {
         return this.reservations;
     }
 
-    public Reservation getReservation(LocalDate date) {
-        return reservations.get(date);
+    public Reservation getReservations(LocalDate date) {
+        return this.reservations.get(date);
     }
 
 }
