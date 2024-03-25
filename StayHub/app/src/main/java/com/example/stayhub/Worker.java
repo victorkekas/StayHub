@@ -22,7 +22,6 @@ public class Worker {
             if (room.getOwner().equals(owner)) {
                 // get the reservations for each owner's rooms
                 for (Reservation res : ((room.getReservationSystem()).getReservations()).values()) {
-
                     System.out.println(res);
                 }
             }

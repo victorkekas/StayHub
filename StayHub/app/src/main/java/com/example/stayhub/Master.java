@@ -38,6 +38,7 @@ public class Master {
         int tot =0;
         for(byte b:currentworker){
             tot+=b;
+            System.out.println(b);
         }
 
         (workers.get(tot%numOfworkers)).AddRoom(room);
